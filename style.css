@@ -1,28 +1,61 @@
 body {
    
     display: flex;
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     justify-content: center;
     align-items: center;
-    
+  
+
 }
+
+ .button {
+    top: 30px;
+    position: absolute;
+ box-sizing: border-box;
+ }
+
+ button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-wrap: 1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 50px;
+    width: 800px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    border: solid 2px blue;
+    background-color: blueviolet;
+    color: greenyellow;
+    cursor: pointer;
+ }
+
+ button:hover {
+    background-color: blue;
+    border-color: blueviolet;
+ }
 
 #squareContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 800px;
+    width: 960px;
+    height: auto;
     box-sizing: border-box;
-    
+
 
 }
 
  .square {
     display: flex;
-    flex-direction: row;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     border: 1px, solid, black;
     box-sizing: border-box;
     cursor: pointer;
@@ -31,3 +64,4 @@ body {
 .color {
     background-color: blue;
 }
+
