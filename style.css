@@ -1,64 +1,64 @@
 body {
    
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    justify-content: center;
-    align-items: center;
-  
+   display: flex;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   justify-content: center;
+   align-items: center;
+ 
 }
 
- .button {
-    display: flex;
-    top: 30px;
-    position: absolute;
- box-sizing: border-box;
+.button {
+   display: flex;
+   top: 30px;
+   position: absolute;
+box-sizing: border-box;
 
- }
+}
 
- button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 50px;
-    width: 800px;
-    height: 60px;
-    font-size: 30px;
-    font-weight: bold;
-    border: solid 4px blue;
-    background-color: blueviolet;
-    color: greenyellow;
-    cursor: pointer;
- }
+button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-top-left-radius: 50px;
+   border-top-right-radius: 10px;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 50px;
+   width: 800px;
+   height: 60px;
+   font-size: 30px;
+   font-weight: bold;
+   border: solid 4px blue;
+   background-color: blueviolet;
+   color: greenyellow;
+   cursor: pointer;
+}
 
- button:hover {
-    background-color: blue;
-    border-color: blueviolet;
- }
+button:hover {
+   background-color: blue;
+   border-color: blueviolet;
+}
 
 #squareContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 960px;
-    height:auto;
-    box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   width: 960px;
+   height:auto;
+   box-sizing: border-box;
+   aspect-ratio: 1/1;
 
 
 }
 
- .square {
-    display: flex;
-    flex: 1 1 60px;
-    height: 60px;
-    width: 60px;
-    border: 1px, solid, black;
-    box-sizing: border-box;
-    cursor: pointer;
+.square {
+   display: flex;
+   flex-grow: 0;
+   flex-shrink: 0;
+   height: 60px;
+   width: 60px;
+   border: 1px, solid, black;
+   box-sizing: border-box;
+   cursor: pointer;
 }
-
-
