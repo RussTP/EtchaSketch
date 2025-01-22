@@ -6,13 +6,13 @@ let gridTotal = column * row;
 
 //loop to create 16x16 grid 
 function gridCreate () {
-
 for (let i = 0; i < gridTotal; i++) {
     const square = document.createElement("div");
     square.id = "square" +i;
     square.className = "square";
     container.appendChild(square);
 
+//square box event listener w/random colour
 square.addEventListener("mouseenter", (e) => {
     const color = randomRgbColor();
     e.preventDefault();
@@ -22,7 +22,7 @@ square.addEventListener("mouseenter", (e) => {
 container.appendChild(square);
 }
 }
-//eventListener to change colour when mouse enters
+
 
 //Random number generator for random colours
 function randomNumber(max) {
@@ -36,11 +36,10 @@ function randomRgbColor() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+  gridCreate();
 
-    gridCreate();
 
-
-// rows * columns to create a new grid  
+// new grid creation
 
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
