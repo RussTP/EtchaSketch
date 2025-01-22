@@ -1,39 +1,56 @@
 const container = document.querySelector("#squareContainer");
 let column = 16;
 let row = 16;
+let gridTotal = column * row;
+
+
 //loop to create 16x16 grid 
 function gridCreate () {
 
-for (let i = 0; i < column * row; i++) {
+for (let i = 0; i < gridTotal; i++) {
     const square = document.createElement("div");
     square.id = "square" +i;
     square.className = "square";
     container.appendChild(square);
 
+square.addEventListener("mouseenter", (e) => {
+    const color = randomRgbColor();
+    e.preventDefault();
+    square.style.backgroundColor = color;
+});
 
-
+container.appendChild(square);
+}
+}
 //eventListener to change colour when mouse enters
 
-square.addEventListener("mouseenter", (e) => {
-e.target.classList.add("color");
-            });
-        } 
-    }
+//Random number generator for random colours
+function randomNumber(max) {
+    return Math.floor(Math.random() * (max +1));
+}
+
+function randomRgbColor() {
+    let r = randomNumber(255);
+    let g = randomNumber(255);
+    let b = randomNumber(255);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
 
     gridCreate();
+
 
 // rows * columns to create a new grid  
 
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-    column = parseInt(prompt("Please enter the number of rows"));
-    row = parseInt(prompt("Please enter the number of columns"));
-    if (isNaN(row) || isNaN(column) || row < 1 || column < 1) {
-        alert("Please enter a valid amount of rows and columns");
+    let gridPrompt = parseInt(prompt("Please enter the grid size you'd like:"));
+    if (isNaN(gridPrompt) || gridPrompt < 1 || gridPrompt > 100) {
+        alert("Please enter a valid amount of rows and columns", 16);
 
     }else {
-        container.innerHTML = "";   
-        const gridTotal = column * row;
+        container.innerHTML = "";
+        gridTotal = gridPrompt * gridPrompt;  
         gridCreate(gridTotal);
     }
     });

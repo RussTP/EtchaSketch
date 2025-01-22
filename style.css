@@ -6,21 +6,20 @@ body {
     justify-content: center;
     align-items: center;
   
-
 }
 
  .button {
+    display: flex;
     top: 30px;
     position: absolute;
  box-sizing: border-box;
+
  }
 
  button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 1;
-    flex-wrap: 1;
     border-top-left-radius: 50px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -29,7 +28,7 @@ body {
     height: 60px;
     font-size: 30px;
     font-weight: bold;
-    border: solid 2px blue;
+    border: solid 4px blue;
     background-color: blueviolet;
     color: greenyellow;
     cursor: pointer;
@@ -46,7 +45,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     width: 960px;
-    height: auto;
+    height:auto;
     box-sizing: border-box;
 
 
@@ -54,6 +53,7 @@ body {
 
  .square {
     display: flex;
+    flex: 1 1 60px;
     height: 60px;
     width: 60px;
     border: 1px, solid, black;
@@ -61,7 +61,4 @@ body {
     cursor: pointer;
 }
 
-.color {
-    background-color: blue;
-}
 
